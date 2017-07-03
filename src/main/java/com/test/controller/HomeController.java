@@ -55,7 +55,8 @@ public class HomeController {
     {
 
         String selectUsers = "select * from users order by RegistrationDate desc";
-        String url = "jdbc:mysql://localhost:3306/helloworld";
+        String url = "jdbc:mysql://registrant.cb2rjqfibocn.us-west-2.rds.amazonaws.com/hello3";
+
         String userName = "root";
         String password = access.passWord;
         try {
@@ -108,7 +109,7 @@ public class HomeController {
         zip = zip.replaceAll("-","");
 
 
-        System.out.println(zip);
+
         if((!Pattern.matches("[a-zA-Z]+", first))||first.length()>30||first.length()<1){
             list.add("The first name field must contain letters only and have 1-30 characters");
         }
@@ -180,7 +181,7 @@ public class HomeController {
 
             String date = getDate();
 
-            String url = "jdbc:mysql://localhost:3306/helloworld";
+            String url = "jdbc:mysql://registrant.cb2rjqfibocn.us-west-2.rds.amazonaws.com/hello3";
             String username = "root";
             String password = access.passWord;
             Class.forName("com.mysql.jdbc.Driver");
